@@ -1,1 +1,22 @@
-
+div(ng-controller='ngcEditorHtmlController')
+    div.controleEditor
+        md-button.md-icon-button.md-button.md-ink-ripple.md-hover(
+            ng-repeat="icon in vm.icons"
+            aria-label='{{icon.type}}'
+            title='{{icon.title}}', 
+            data-id="{{icon.data}}",
+            ng-click='vm.clickItem($event)') 
+                div(ng-switch="icon.type")
+                    i.md-icon.dp48.material-icons(ng-switch-when="icon" ) {{icon.icon}}
+                    div(ng-switch-default ng-bind-html="icon.icon")
+    div.input-field.col.s12
+        div.editor.materialize-textarea(
+            ng-model='vm.ngModel',
+            contenteditable='{{vm.editavel}}', 
+            data-text='{{vm.label}}', 
+            tamanho-maximo='vm.tamanho'
+            ng-bind-html="vm.descricao"
+            ng-class='{invalidCounter: vm.isInvalidCounter}'
+            ) 
+        div.contadores(
+            ng-class='{invalidCounter: vm.isInvalidCounter}') {{vm.textCounter}}/{{vm.tamanho}}
