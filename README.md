@@ -1,0 +1,2 @@
+# ngEditorHTML
+Editor angular HTML
