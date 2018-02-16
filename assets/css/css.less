@@ -1,0 +1,335 @@
+/*Estilo do componente ngc-ricj.text.editor-compoment - Início*/
+.controleEditor {
+    text-align:center;
+    padding:2px;
+    margin:0px;
+    background-color: #fbfbfb;
+    color:rgba(0,0,0,0.38);
+
+  }
+
+  .input {
+    display: inline-block;
+    width: 200px;
+    border-bottom: 2px #000 solid;
+  }
+
+  [contentEditable=true]:empty:not(:focus):before{
+      color:rgba(0,0,0,0.38);
+      content:attr(data-text);
+  }
+
+  .contadores.ng-binding.invalidCounter{
+    color: rgb(221,44,0);
+  }
+
+  .invalidCounter{
+    border-width: 0 0 2px 0!important;  
+    border-color: rgb(221,44,0)!important; 
+  }
+
+  .contadores.ng-binding {
+    text-align: end;
+    font-size: 12px;
+    line-height: 14px;
+    overflow: hidden;
+    -webkit-transition: all .3s cubic-bezier(0.55,0,0.55,0.2);
+    transition: all .3s cubic-bezier(0.55,0,0.55,0.2);
+    opacity: 1;
+    margin-top: 0;
+    padding-top: 5px;
+    padding-right: 2px;
+    padding-left: 0;
+  }
+
+  .textodiv:after{
+        color:rgba(0,0,0,0.38);
+        content:attr(data-text);
+        font-size: 12px;
+    }
+
+  .editor:focus:not([readonly]) {
+      border-bottom: 1px solid rgb(41,98,255);
+      box-shadow: 0 1px 0 0 #26a69a;
+  }
+
+  .md-button.md-default-theme:not([disabled]).md-icon-button:hover.md-hover:hover, .md-button:not([disabled]).md-icon-button:hover.md-hover:hover
+  {
+      text-decoration: none;
+      background: rgb(226, 226, 226);
+      color:rgb(39, 39, 39);
+  }
+
+  .editor {
+      overflow-y: hidden;
+      resize: none;
+      min-height: 2rem;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+      border-radius: 0;
+      outline: none;
+      font-size: 1rem;
+      padding: .5em .5rem 1.6rem .5rem;
+      min-height: 100px;
+      box-shadow: none;
+      box-sizing: content-box;
+      transition: all 0.3s;
+
+  }
+
+  .contador{
+      font-size: 12px;
+      line-height: 14px;
+      overflow: hidden;
+      -webkit-transition: all .3s cubic-bezier(.55,0,.55,.2);
+      transition: all .3s cubic-bezier(.55,0,.55,.2);
+      opacity: 1;
+      margin-top: 0;
+      padding-top: 5px;
+      text-align: right;
+      padding-right: 2px;
+      padding-left: 0;
+  }
+
+  .md-button.md-icon-button {
+     border-radius: 4px;
+     margin: 0 2px;
+  }
+
+  .md-button:hover {
+      text-decoration: none;
+      background: #f1f1f1;
+  }
+
+  .md-button:active {
+      text-decoration: none;
+      background: #dedede;
+  }
+
+  .output {
+    width:99.7%;
+    height:100px
+  }
+/*Estilo do componente ngc-ricj.text.editor-compoment - Fim*/
+
+.tamanho-minimo{
+    min-width: 0%;
+}
+.borda-componente{
+
+  &.hover-botoes {
+    transition: 0.2s background-color ease-in-out;
+    background-color: @botoes-flutuantes-background-hover-color;
+    div.botoes-flutuantes {
+      transition: 0.2s background-color ease-in-out;
+      background-color: @botoes-flutuantes-background-hover-color;
+    }
+  }
+  position: relative;
+  border-style: groove;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+questionario-pergunta:not(:last-child) > div > questionario-secao > .borda-componente,
+questionario-secao:not(:last-child) > .borda-componente {
+    margin-bottom: 8px;
+}
+
+.espacamento{
+    padding-bottom: 1%;
+}
+questionario-secao button.botoes-reordenar,
+questionario-pergunta button.botoes-reordenar{
+    margin: 0;
+}
+
+questionario-secao:last-child .secao-titulo-container .botoes-reordenar.para-baixo,
+questionario-pergunta:last-child .pergunta-titulo-container .botoes-reordenar.para-baixo{
+    // visibility: hidden;
+}
+questionario-secao:first-child .secao-titulo-container .botoes-reordenar.para-cima,
+questionario-pergunta:first-child .pergunta-titulo-container .botoes-reordenar.para-cima{
+    // visibility: hidden;
+}
+.transition25{
+    transition: all 0.25s ease-in-out;
+}
+.rotate180{
+    transform: rotate(180deg);
+}
+questionario {
+    display: block;
+    position: relative;
+}
+@botoes-flutuantes-background-hover-color : #ededed;
+questionario-secao{
+    :focus {
+        outline: none;
+    }
+    display: block;
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    box-sizing: border-box;
+    min-width: 0;
+    display: block;
+    .validacao-secao{
+        margin: 0;
+    }
+    .td-88-width {
+      width: 88px;
+    }
+    .cabecalho {
+      // word-break: break-word;
+    }
+    .botoes-itens-adicionados{
+    //   margin-bottom: 20px;
+    }
+    .item-adicionado{
+      .item-header {
+        min-height: 48px;
+      }
+    }
+
+    .titulo-secao{
+        // font-size: 14px;
+        font-weight: 600;
+        font-family: 'Open Sans',sans-serif;
+        display: block;
+    }
+    div.botoes-flutuantes {
+
+        background-color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        button {
+            min-width: 0;
+            margin: 0;
+            padding: 0 12px;
+        }
+    }
+    button.responsive {
+        min-width: 40px
+    }
+    .tabela-resultados {
+        padding: 0 8px 8px 8px;
+
+        .mensagem-erro {
+            font-size: 13px;
+        }
+        .mensagem-erro,
+        td.totalizador.error {
+            color: red;
+        }
+
+
+
+    }
+}
+questionario-pergunta {
+    // min-height: 36px;
+    display: block;
+    position: relative;
+    transition: 0.2s background-color ease-in-out;
+    &.hover-botoes {
+        transition: 0.2s background-color ease-in-out;
+        background-color: @botoes-flutuantes-background-hover-color;
+        div.botoes-flutuantes {
+          transition: 0.2s background-color ease-in-out;
+          background-color: @botoes-flutuantes-background-hover-color;
+        }
+    }
+
+    .botoes-pergunta{
+
+    }
+    .cabecalho {
+
+        button.botao-orientacao {
+            padding: 0;
+            margin: 0;
+            height: 24px;
+            width: 36px;
+            min-height: 0px;
+            min-width: 0px;
+
+            md-icon {
+                vertical-align: unset;
+            }
+        }
+    }
+
+    .resposta-anterior-container {
+        background-color: lightgray;
+        padding: 0 4px;
+
+        .resposta-anterior-valor,
+        .resposta-anterior-titulo {
+        }
+    }
+
+    .titulo{
+        // font-size: 14px;
+        font-weight: 600;
+        font-family: 'Open Sans',sans-serif;
+        // color: rgb(117, 117, 117);
+        display: block;
+        // margin-bottom: 8px;
+        &.obrigatorio:after{
+        content: ' *';
+        font-size: 13px;
+        vertical-align: top;
+        }
+        &.error {
+        color: rgb(221,44,0);
+        }
+    }
+
+    md-input-container {
+        margin-bottom: 0;
+        margin-top: 0;
+
+        label {
+        visibility: hidden;
+        }
+    }
+
+    .alinhamento-matriz{
+        margin-top: 22%;
+    }
+
+}
+
+questionario-grupo {
+  .nome-grupo{
+    padding: 20px 0;
+  }
+  display: block;
+  position: relative;
+  .grupo-cabecalho {
+      margin: 3px 1px 25px 1px;
+      .cabecalho-conteudo {
+        padding: 8px 18px;
+      }
+  }
+  .grupo-rodape {
+      margin: 0 1px 3px 1px;
+      .rodape-conteudo {
+        padding: 8px 18px;
+      }
+  }
+}
+
+.imprimir {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background: white;
+}
